@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .contenedor-flexible{
+            background-color: gray;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+        .contenedor-flexible-2{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .elemento-flexible{
+            color: white;
+            font-size: 5rem;
+        }
+        .uno{
+            background-color: red;
+            flex-basis: 50vh; 
+            flex-grow: 1;
+            flex-shrink: 1;
+            height: 100%;
+            background-image: url(/img/1.jpg);
+            filter: brightness(0.5);
+            
+        }
+        .dos{
+            background-color: orange;
+            flex-basis: 50vh;
+            flex-grow: 1;
+            flex-shrink: 1;     
+            height: 50vh;
+            background-image: url(/img/3.jpg);
+        }
+        .tres{
+            background-color: blue;
+            flex-basis: 50vh;
+            flex-grow: 1;
+            height: 50vh;
+            background-image: url(/img/2.jpg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor-flexible">
+        <div class="elemento-flexible uno">1</div>
+        <div class="contenedor-flexible-2">
+            <div class="elemento-flexible dos">2</div>
+            <div class="elemento-flexible tres">3</div>
+        </div>
+    </div>
+</body>
+</html>
